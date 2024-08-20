@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playball&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playball&display=swap');
+body {
+  font-family: 'Nunito Sans';
+  background-color: #f3f2f9;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.flex-container > div {
+  background-color: #ffffff;
+  width: 18rem;
+  height: 25rem;
+  margin: 2rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0.5rem 0 #e2e1e1;
+}
+.top-icon-container {
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+div.top-icon-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  height: 25%;
+}
+.top-icon-container i::before {
+  color: #f3f2f9;
+}
+.top-icon-container i {
+  font-size: 1.5rem;
+}
+.card-1 .top-icon-container {
+  background-color: #bd071e;
+}
+.card-2 .top-icon-container {
+  background-color: #3b599a;
+}
+.card-3 .top-icon-container {
+  background-color: #c13584;
+}
+.card-4 .top-icon-container {
+  background-color: #1869ff;
+}
+.card-5 .top-icon-container {
+  background-color: #ea4c88;
+}
+.card-6 .top-icon-container {
+  background-color: #1ca1f1;
+}
+.card-7 .top-icon-container {
+  background-color: #f57f01;
+}
+.card-8 .top-icon-container {
+  background-color: #0177b6;
+}
+.image{
+  text-align: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 0.3rem solid #ffffff;
+  margin: -2.25rem 0 0 0;
+}
+.card-body {
+  height: 72%;
+  padding: 0 3.25rem;
+  text-align: center;
+}
+.card-body .profile-name {
+  font-size: 1.25rem;
+  padding: 1rem 0;
+  font-family: 'Playball' , cursive;
+  color: #787878;
+}
+.card-body p {
+  color: #d1d1d1;
+  font-size: 0.75rem;
+  height: 5rem;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.bottom-icon {
+  padding: 1rem 1.5rem 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-icon i::before{
+  font-size: 0.75rem;
+  color: #b3b3b3;
+}
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+.card-1 .image{
+  box-shadow: 0 0 1.5rem 0 #BD071E5f;
+}
+.card-2 .image{
+  box-shadow: 0 0 1.5rem 0 #3b599a5f;
+}
+.card-3 .image{
+  box-shadow: 0 0 1.5rem 0 #c135845f;
+}
+.card-4 .image{
+  box-shadow: 0 0 1.5rem 0 #1869ff5f;
+}
+.card-5 .image{
+  box-shadow: 0 0 1.5rem 0 #ea4c885f;
+}
+.card-6 .image{
+  box-shadow: 0 0 1.5rem 0 #1ca1f15f;
+}
+.card-7 .image{
+  box-shadow: 0 0 1.5rem 0 #f57f015f;
+}
+.card-8 .image{
+  box-shadow: 0 0 1.5rem 0 #0177b65f;
+}
+.container {
+  cursor: pointer;
+}
+.container input {
+  opacity: 0;
+}
+.checkmark {
+  position: absolute;
+  margin-left: -1.5rem;
+  height: 1rem;
+  width: 1rem;
+  padding: 1px;
+  border: 0.15rem solid #ffffff;
+  border-radius: 0.25rem;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+}
+.card:has(input:checked) .card-body {
+  p {
+    color: #F3F2F9;
+  }
+  .profile-name {
+    color: #ffffff;
+  }
+  .bottom-icon i::before {
+    color: #F3F2F9;
+  }
+}
+.card .top-icon-container:has(input:checked) {
+  background-color: #ffffff;
+}
+.card .container .checkmark::after {
+  left: 0.4rem;
+  top: 0.1rem;
+  width: 0.25rem;
+  height: 0.5rem;
+  transform: rotate(45deg);
+}
+.card:has(.container input:checked) .card-body {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.card-1 .container .checkmark::after {
+  border: solid #BD071E;
+  border-width: 0 3px 3px 0;
+}
+.card-1:has(.container input:checked) .card-body {
+  background-color: #BD071E;
+}
+.card-1 .top-icon-container:has(.container input:checked) {
+  .checkmark {
+    border: 0.15rem solid #BD071E;
+  }
+  i.fa-pinterest-p::before {
+    color: #BD071E;
+  }
+}
+.card-2 .container .checkmark:after {
+  border: solid #3b599a;
+  border-width: 0 3px 3px 0;
+}
+.card-2:has(.container input:checked) .card-body {
+  background-color: #3b599a;
+}
+.card-2 .top-icon-container:has(.container input:checked) {
+  .checkmark {
+    border: 0.15rem solid #3b599a;
+  }
+  i.fa-facebook-f::before {
+    color: #3b599a;
+  }
+}
+.card-3 .container .checkmark:after {
+  border: solid #c13584;
+  border-width: 0 3px 3px 0;
+}
+.card-3:has(.container input:checked) .card-body {
+  background-color: #c13584;
+}
+.card-3 .top-icon-container:has(.container input:checked) {
+  .checkmark {
+    border: 0.15rem solid #c13584;
+  }
+  i.fa-instagram::before {
+    color: #c13584;
+  }
+}
+.card-4 .container .checkmark:after {
+  border: solid #1869ff;
+  border-width: 0 3px 3px 0;
+}
+.card-4:has(.container input:checked) .card-body {
+  background-color: #1869ff;
+}
+.card-4 .top-icon-container:has(.container input:checked) {
+  .checkmark {
+    border: 0.15rem solid #1869ff;
+  }
+  i.fa-behance::before {
+    color: #1869ff;
+  }
+}
+.card-5 .container .checkmark:after {
+  border: solid #ea4c88;
+  border-width: 0 3px 3px 0;
+}
+.card-5:has(.container input:checked) .card-body {
+  background-color: #ea4c88;
+}
+.card-5 .top-icon-container:has(.container input:checked) {
+  .checkmark {
+    border: 0.15rem solid #ea4c88;
+  }
+  i.fa-dribbble::before {
+    color: #ea4c88;
+  }
+}
+.card-6 .container .checkmark:after {
+  border: solid #1ca1f1;
+  border-width: 0 3px 3px 0;
+}
+.card-6:has(.container input:checked) .card-body {
+  background-color: #1ca1f1;
+}
+.card-6 .top-icon-container:has(.container input:checked) {
+  .checkmark {
+    border: 0.15rem solid #1ca1f1;
+  }
+  i.fa-twitter::before {
+    color: #1ca1f1;
+  }
+}
+.card-7 .container .checkmark:after {
+  border: solid #f57f01;
+  border-width: 0 3px 3px 0;
+}
+.card-7:has(.container input:checked) .card-body {
+  background-color: #f57f01;
+}
+.card-7 .top-icon-container:has(.container input:checked) {
+  .checkmark {
+    border: 0.15rem solid #f57f01;
+  }
+  i.fa-blogger-b::before {
+    color: #f57f01;
+  }
+}
+.card-8 .container .checkmark:after {
+  border: solid #0177b6;
+  border-width: 0 3px 3px 0;
+}
+.card-8:has(.container input:checked) .card-body {
+  background-color: #0177b6;
+}
+.card-8 .top-icon-container:has(.container input:checked) {
+  .checkmark {
+    border: 0.15rem solid #0177b6;
+  }
+  i.fa-linkedin-in::before {
+    color: #0177b6;
+  }
+}
